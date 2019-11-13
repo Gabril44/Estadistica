@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Menu {
 	
-    public Menu() {
+    public Menu()
+    {
         Scanner sc= new Scanner(System.in);
         Distribuciones distribucion = new Distribuciones();
 
         System.out.println("****************BIENVENIDO*****************");
-        System.out.println("\n");
+        System.out.println(" ");
         System.out.println("Que distribucion desea hacer?");
         System.out.println("\n");
         System.out.println("1_Binomial\n2_Poisson\n3_Hipergeometrica\n0_Salir");
@@ -17,14 +18,15 @@ public class Menu {
 
         switch(op){
 
-        case 1:System.out.println("ingrese n");
+        case 1:System.out.println("Ingrese N(Numero de eventos)");
             double n=sc.nextDouble();
-            System.out.println("ingrese x");
+            System.out.println("Ingrese X(Números de exitos)");
             double x=sc.nextDouble();
-            System.out.println("ingrese p");
+            System.out.println("Ingrese P(Probabilidad de éxito u Ocurrencia)");
             double p=sc.nextDouble();
-            System.out.println("ingrese q");
+            System.out.println("Ingrese Q(Probabilidad de Fracaso)");
             double q=sc.nextDouble();
+            System.out.println("\nEl resultado es: "+" ");
             System.out.println(Distribuciones.Binomial(n, x, p, q));
             break;
         case 2:
@@ -37,22 +39,17 @@ public class Menu {
 //---------------------------------------------------------------------------
         case 0: break;
 //---------------------------------------------------------------------------
-        /*case 3:
-        System.out.println("ingrese N");
+        case 3:
+        System.out.println("Ingrese N(Tamaño de población)");
         double N=sc.nextDouble();
-        System.out.println("ingrese n");
-        double n2=sc.nextDouble();
-        System.out.println("ingrese X");
+        System.out.println("Ingrese n(Tamaño de la muestra)");
+        double n1=sc.nextDouble();
+        System.out.println("Ingrese X(Éxitos en la población)");
         double X=sc.nextDouble();
-        System.out.println("ingrese x");
-        double x2=sc.nextDouble();
-
-        System.out.println(Fact.Hipergeometrica(x2, X, N, n2));*/
-
-
-
+        System.out.println("Ingrese x(Éxitos en la muestra)");
+        double x1=sc.nextDouble();
+        System.out.println("\nEl resultado es: "+" ");
+        System.out.println(Distribuciones.Hipergeometrica(x1, X, N, n1));
         }
-
     }
-
 }

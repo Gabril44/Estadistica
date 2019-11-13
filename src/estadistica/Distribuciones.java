@@ -34,16 +34,17 @@ public class Distribuciones {
         return(result); 
     }
 
-    /*public static double Hipergeometrica(double x, double X, double N, double n) {
-            double uno = factorial(X)/(factorial(x)*(factorial(X-x))); 
+
+    public static double Hipergeometrica(double x1, double X, double N, double n1) {
+            double uno = factorial(X)/(factorial(x1)*(factorial(X-x1)));
             double dos = N-X;
-            double tres = n-x;
+            double tres = n1-x1;
             double cuatro= factorial(dos)/(factorial(tres)*(factorial(dos-tres)));
-        double cinco= factorial(N)/(factorial(n)*(factorial(N-n)));
-            double result=uno*cuatro*cinco;
+        double cinco= factorial(N)/(factorial(n1)*(factorial(N-n1)));
+            double result=(uno*cuatro)/cinco;
 
             return result;
-    }*/
+    }
 }
 
 
